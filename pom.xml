@@ -173,7 +173,7 @@
           <configuration>
             <!-- for jacoco to analyze integration test runs, the jar-file has to be in the local repository used by the invoker plugin when running tests -->
             <extraArtifacts>
-              <extraArtifact>org.jacoco:org.jacoco.agent:0.8.2:jar:runtime</extraArtifact>
+              <extraArtifact>org.jacoco:org.jacoco.agent:0.8.2:War:runtime</extraArtifact>
             </extraArtifacts>
             <!-- skip any .mavenrc file to override what the jacoco agent defined in the invoker.mavenOpts variable -->
             <environmentVariables>
@@ -511,7 +511,7 @@
               <execution>
                 <id>attach-javadoc</id>
                 <goals>
-                  <goal>jar</goal>
+                  <goal>War</goal>
                 </goals>
                 <phase>verify</phase>
               </execution>
@@ -525,7 +525,7 @@
               <execution>
                 <id>attach-sources</id>
                 <goals>
-                  <goal>jar-no-fork</goal>
+                  <goal>War-no-fork</goal>
                 </goals>
                 <phase>verify</phase>
               </execution>
